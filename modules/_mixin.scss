@@ -1,0 +1,27 @@
+// @mixin gridContainer {
+//   display: grid;
+// }
+
+@mixin flexBox($justifyContent: center, $alignItems: center) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+
+@mixin gridContainer(
+  $gridTemplateColumn: 100%,
+  $gridTemplateRows: 100%,
+  $justifyContent: center,
+  $alignItems: center
+) {
+  display: grid;
+  grid-template-columns: $gridTemplateColumn;
+  grid-template-rows: $gridTemplateRows;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+
+// @mixin flexContainer($flexDirection : row ) {
+//     display: flex;
+//     flex-direction: $flexDirection;
+// }
