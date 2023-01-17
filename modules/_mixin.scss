@@ -1,7 +1,3 @@
-// @mixin gridContainer {
-//   display: grid;
-// }
-
 @mixin flexBox($justifyContent: center, $alignItems: center) {
   display: flex;
   justify-content: $justifyContent;
@@ -19,6 +15,11 @@
   grid-template-rows: $gridTemplateRows;
   justify-content: $justifyContent;
   align-items: $alignItems;
+}
+
+@mixin widthAndHeight($width, $height) {
+  width: $width;
+  height: $height;
 }
 
 // @mixin flexContainer($flexDirection : row ) {

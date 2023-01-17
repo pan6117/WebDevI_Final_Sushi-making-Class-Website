@@ -22,14 +22,14 @@
     }
 
     main {
-      width: 100%;
-      height: 100%;
+      @include widthAndHeight(100%, 100%);
       background-image: url(./images/main-photo.jpg);
       background-position: center;
       background-size: cover;
     }
 
     aside {
+      @include widthAndHeight(100%, 100%);
       @include gridContainer(50vw 50vw, 20% repeat(2, 1fr));
       grid-template-areas: "h2 h2";
       // "photo1 photo2"
@@ -43,8 +43,7 @@
 
       div {
         text-align: center;
-        width: 100%;
-        height: 250px;
+        @include widthAndHeight(100%, 100%);
         background-color: gray;
         border: 1px solid red;
       }
@@ -55,7 +54,7 @@
 
     footer {
       @include flexBox(space-between);
-
+      padding: 20px 20px;
       div {
         ul {
           @include flexBox;
