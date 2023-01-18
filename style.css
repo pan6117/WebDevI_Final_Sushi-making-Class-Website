@@ -2,13 +2,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border: 1px solid red;
 }
 * body {
   display: grid;
   grid-template-columns: 100vw;
-  grid-template-rows: 10vh 90vh repeat(3, 100vh) 20vh;
+  grid-template-rows: 10vh 90vh repeat(2, 100vh) repeat(2, 50vh) 70vh 30vh;
   justify-content: center;
   align-items: center;
+  border: 1px solid red;
 }
 * body header {
   display: flex;

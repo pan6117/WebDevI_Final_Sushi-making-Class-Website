@@ -6,9 +6,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border: 1px solid red;
 
   body {
-    @include gridContainer(100vw, 10vh 90vh repeat(3, 100vh) 20vh);
+    @include gridContainer(
+      100vw,
+      10vh 90vh repeat(2, 100vh) repeat(2, 50vh) 70vh 30vh
+    );
+    border: 1px solid red;
 
     header {
       @include flexBox(space-between);
