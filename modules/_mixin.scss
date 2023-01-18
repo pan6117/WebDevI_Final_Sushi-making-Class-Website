@@ -22,6 +22,19 @@
   height: $height;
 }
 
+@mixin h2Font {
+  font-size: 4rem;
+  color: $black;
+  text-shadow: $mainFontColor 3px 0 0, $mainFontColor 0 3px 0,
+    $mainFontColor -3px 0 0, $mainFontColor 0 -3px 0;
+}
+
+@mixin h4Font {
+  font-size: 1.2rem;
+  color: $mainFontColor;
+  text-shadow: $black 1px 0 0, $black 0 1px 0, $black -1px 0 0, $black 0 -1px 0;
+}
+
 // @mixin flexContainer($flexDirection : row ) {
 //     display: flex;
 //     flex-direction: $flexDirection;

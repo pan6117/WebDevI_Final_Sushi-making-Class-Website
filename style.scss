@@ -1,27 +1,36 @@
 @import "./modules/mixin";
 @import "./modules/variable";
-// @import "modules/variable";
+@import "./modules/typography";
 // @import "modules/typography";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 1px solid red;
+  //   border: 1px solid red;
 
   body {
-    @include gridContainer(
-      100vw,
-      10vh 90vh repeat(2, 100vh) repeat(2, 50vh) 70vh 30vh
-    );
+    @include gridContainer(100vw, 10vh repeat(4, 90vh) 65vh 25vh);
     border: 1px solid red;
+
+    ul {
+      list-style-type: none;
+
+      a {
+        text-decoration: none;
+      }
+    }
 
     header {
       @include flexBox(space-between);
       padding: 20px 10px;
+      position: sticky;
+      top: 0px;
+      background-color: $white;
 
       nav {
         ul {
           @include flexBox(space-between);
+          gap: 20px;
         }
       }
     }
@@ -29,34 +38,140 @@
     main {
       @include widthAndHeight(100%, 100%);
       background-image: url(./images/main-photo.jpg);
-      background-position: center;
+      background-position: right;
       background-size: cover;
+      @include gridContainer(repeat(4, 1fr), repeat(3, 1fr));
+      grid-template-areas:
+        "main-h1 main-h1 main-h1 second-title"
+        "main-h1 main-h1 main-h1 second-title"
+        "p-content p-content booking-button second-title";
+      padding: 100px;
+
+      h1 {
+        grid-area: main-h1;
+        font-size: 5rem;
+        text-shadow: $mainFontColor 3px 0 0, $mainFontColor 0 3px 0,
+          $mainFontColor -3px 0 0, $mainFontColor 0 -3px 0;
+      }
+
+      p.second-title {
+        grid-area: second-title;
+        writing-mode: vertical-lr;
+        font-size: 4rem;
+        color: $mainFontColor;
+        text-shadow: $black 1.5px 0 0, $black 0 1.5px 0, $black -1.5px 0 0,
+          $black 0 -1.5px 0;
+      }
+
+      p.main-content {
+        grid-area: p-content;
+        color: $black;
+        text-shadow: $mainFontColor 1.5px 0 0, $mainFontColor 0 1.5px 0,
+          $mainFontColor -1.5px 0 0, $mainFontColor 0 -1.5px 0;
+        padding: 10px 20px 10px 0px;
+      }
+
+      button.booking-button {
+        grid-area: booking-button;
+        border-radius: 25px;
+        padding: 14px;
+        color: $mainFontColor;
+        background-color: $black;
+        border: none;
+      }
     }
 
     aside {
       @include widthAndHeight(100%, 100%);
-      @include gridContainer(50vw 50vw, 20% repeat(2, 1fr));
-      //   grid-template-areas: "h2 h2";
-      // "photo1 photo2"
-      // "photo3 photo4";
+      @include gridContainer(repeat(3, 1fr), 20% 1fr);
+
+      &.why-block {
+        div {
+          text-align: center;
+          @include widthAndHeight(100%, 100%);
+          padding: 30px 10px;
+          // background-color: gray;
+          // border: 1px solid red;
+
+          img {
+            @include widthAndHeight(20vw, 35vh);
+            border-radius: 50%;
+          }
+
+          h4 {
+            padding: 20px 10px 10px 10px;
+            @include h4Font;
+          }
+
+          p {
+            padding: 10px 50px;
+          }
+        }
+      }
 
       h2 {
         // grid-area: h2;
         grid-column-start: 1;
-        grid-column-end: 3;
-        color: $h2FontColor;
+        grid-column-end: 4;
+        // color: $black;
         text-align: center;
+        @include h2Font;
       }
 
-      div {
-        text-align: center;
-        @include widthAndHeight(100%, 100%);
-        background-color: gray;
-        border: 1px solid red;
+      &.about-block {
+        padding: 80px 100px;
+
+        h2 {
+          grid-column-start: 2;
+          grid-column-end: 4;
+        }
+
+        img {
+          width: 35vw;
+          border-radius: 30px;
+          grid-row-start: 1;
+          grid-row-end: 3;
+        }
+
+        p {
+          grid-column-start: 2;
+          grid-column-end: 4;
+          padding: 0px 80px;
+          font-size: 1.5rem;
+        }
       }
-      //   &.why-block h2 {
-      //     color: red;
-      //   }
+
+      &.group-block {
+        padding: 50px 80px;
+
+        h2 {
+          grid-column-start: 1;
+          grid-column-end: 3;
+          grid-row-start: 1;
+          grid-row-end: 2;
+        }
+
+        img {
+          height: 45vw;
+          border-radius: 30px;
+          grid-row-start: 1;
+          grid-row-end: 3;
+          grid-column-start: 3;
+          grid-column-end: 4;
+        }
+
+        div {
+          grid-row-start: 2;
+          grid-row-end: 3;
+          grid-column-start: 1;
+          grid-column-end: 3;
+
+          //   &.step-grid-container {
+          //     @include gridContainer(1fr 6fr, repeat(3, 1fr));
+          //     color: red;
+          //   }
+        }
+      }
     }
 
     footer {
