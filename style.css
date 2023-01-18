@@ -38,10 +38,10 @@
   grid-template-rows: 20% repeat(2, 1fr);
   justify-content: center;
   align-items: center;
-  grid-template-areas: "h2 h2";
 }
 * body aside h2 {
-  grid-area: h2;
+  grid-column-start: 1;
+  grid-column-end: 3;
   color: rgb(0, 255, 128);
   text-align: center;
 }
