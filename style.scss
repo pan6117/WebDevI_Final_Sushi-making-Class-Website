@@ -22,7 +22,7 @@
 
     header {
       @include flexBox(space-between);
-      padding: 20px 10px;
+      padding: 20px 30px;
       position: sticky;
       top: 0px;
       background-color: $white;
@@ -61,6 +61,8 @@
         color: $mainFontColor;
         text-shadow: $black 1.5px 0 0, $black 0 1.5px 0, $black -1.5px 0 0,
           $black 0 -1.5px 0;
+        display: flex;
+        align-items: center;
       }
 
       p.main-content {
@@ -136,8 +138,8 @@
         p {
           grid-column-start: 2;
           grid-column-end: 4;
-          padding: 0px 80px;
-          font-size: 1.5rem;
+          padding: 0px 0px 0px 80px;
+          font-size: 2rem;
         }
       }
 
