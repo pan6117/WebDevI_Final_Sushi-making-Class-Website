@@ -25,7 +25,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 10px;
+  padding: 20px 30px;
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
@@ -63,6 +63,8 @@ body {
   font-size: 4rem;
   color: #ffc629;
   text-shadow: black 1.5px 0 0, black 0 1.5px 0, black -1.5px 0 0, black 0 -1.5px 0;
+  display: flex;
+  align-items: center;
 }
 * body main p.main-content {
   grid-area: p-content;
@@ -131,8 +133,8 @@ body {
 * body aside.about-block p {
   grid-column-start: 2;
   grid-column-end: 4;
-  padding: 0px 80px;
-  font-size: 1.5rem;
+  padding: 0px 0px 0px 80px;
+  font-size: 2rem;
 }
 * body aside.group-block {
   padding: 50px 80px;
