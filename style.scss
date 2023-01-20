@@ -6,7 +6,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
   //   border: 1px solid red;
+
+  //   html {
+  //     scroll-behavior: smooth;
+  //   }
 
   body {
     @include gridContainer(100vw, 10vh repeat(4, 95vh) 80vh 12vh);
