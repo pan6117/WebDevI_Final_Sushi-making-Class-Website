@@ -9,8 +9,7 @@
   //   border: 1px solid red;
 
   body {
-    @include gridContainer(100vw, 10vh repeat(4, 90vh) 65vh 25vh);
-    border: 1px solid red;
+    @include gridContainer(100vw, 10vh repeat(4, 95vh) 80vh 12vh);
 
     ul {
       list-style-type: none;
@@ -88,6 +87,8 @@
       @include gridContainer(repeat(3, 1fr), 20% 1fr);
 
       &.why-block {
+        padding: 50px 80px;
+
         div {
           text-align: center;
           @include widthAndHeight(100%, 100%);
@@ -122,6 +123,7 @@
 
       &.about-block {
         padding: 80px 100px;
+        background-color: bisque;
 
         h2 {
           grid-column-start: 2;
@@ -139,7 +141,7 @@
           grid-column-start: 2;
           grid-column-end: 4;
           padding: 0px 0px 0px 80px;
-          font-size: 2rem;
+          font-size: 1.8rem;
         }
       }
 
@@ -168,20 +170,93 @@
           grid-column-start: 1;
           grid-column-end: 3;
 
-          //   &.step-grid-container {
-          //     @include gridContainer(1fr 6fr, repeat(3, 1fr));
-          //     color: red;
-          //   }
+          &.step-grid-container {
+            @include gridContainer(1fr 4fr, repeat(3, 1fr));
+            justify-items: center;
+            grid-template-areas:
+              "step1 p-step1"
+              "step2 p-step2"
+              "step3 p-step3";
+            height: 50vh;
+            padding: 0px 20px 0px 0px;
+            font-size: 1.5rem;
+
+            div.step1 {
+              grid-area: step1;
+              @include widthAndHeight(60px, 60px);
+              background-color: $mainFontColor;
+              border-radius: 50%;
+              text-align: center;
+              line-height: 60px;
+              //   @include h4Font;
+            }
+
+            p.p-step1 {
+              grid-area: p-step1;
+            }
+
+            div.step2 {
+              grid-area: step2;
+              @include widthAndHeight(60px, 60px);
+              background-color: $mainFontColor;
+              border-radius: 50%;
+              text-align: center;
+              line-height: 60px;
+            }
+
+            p.p-step2 {
+              grid-area: p-step2;
+            }
+
+            div.step3 {
+              grid-area: step3;
+              @include widthAndHeight(60px, 60px);
+              background-color: $mainFontColor;
+              border-radius: 50%;
+              text-align: center;
+              line-height: 60px;
+            }
+
+            p.p-step3 {
+              grid-area: p-step3;
+            }
+          }
+        }
+      }
+
+      &.crew-block {
+        background-color: bisque;
+        @include gridContainer(repeat(2, 1fr), 1fr 2fr);
+        padding: 15px 0px;
+
+        div {
+          padding: 15px;
+          @include h4Font;
+          font-size: 2rem;
+
+          img {
+            width: 19vw;
+            border-radius: 50%;
+          }
+
+          &.pan {
+            text-align: center;
+          }
+
+          &.taty {
+            text-align: center;
+          }
         }
       }
     }
 
     footer {
       @include flexBox(space-between);
-      padding: 20px 20px;
+      padding: 20px 30px;
       div {
         ul {
-          @include flexBox;
+          @include flexBox(space-between);
+          gap: 30px;
         }
       }
     }
