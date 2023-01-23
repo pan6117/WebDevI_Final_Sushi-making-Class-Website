@@ -1,26 +1,28 @@
 @import "./modules/mixin";
 @import "./modules/variable";
 @import "./modules/typography";
-// @import "modules/typography";
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  //   border: 1px solid red;
-
-  //   html {
-  //     scroll-behavior: smooth;
-  //   }
 
   body {
     @include gridContainer(100vw, 10vh repeat(4, 95vh) 80vh 12vh);
+    font-family: Hakubo;
+    border: 10px solid #ffc629;
 
     ul {
       list-style-type: none;
 
       a {
         text-decoration: none;
+        color: $black;
+
+        &:hover {
+          color: $mainFontColor;
+        }
       }
     }
 
@@ -30,6 +32,13 @@
       position: sticky;
       top: 0px;
       background-color: $white;
+      border-radius: 50px;
+      border: 5px solid #ffc629;
+
+      div img {
+        width: 50px;
+        height: 50px;
+      }
 
       nav {
         ul {
@@ -90,6 +99,7 @@
     aside {
       @include widthAndHeight(100%, 100%);
       @include gridContainer(repeat(3, 1fr), 20% 1fr);
+      gap: 20px;
 
       &.why-block {
         padding: 50px 80px;
@@ -98,8 +108,10 @@
           text-align: center;
           @include widthAndHeight(100%, 100%);
           padding: 30px 10px;
-          // background-color: gray;
-          // border: 1px solid red;
+          background-color: #fac941;
+          border: 2px solid black;
+          border-radius: 50px;
+          column-gap: 20px;
 
           img {
             @include widthAndHeight(20vw, 35vh);
@@ -233,6 +245,7 @@
         background-color: bisque;
         @include gridContainer(repeat(2, 1fr), 1fr 2fr);
         padding: 15px 0px;
+        gap: 0px;
 
         div {
           padding: 15px;
@@ -257,11 +270,23 @@
 
     footer {
       @include flexBox(space-between);
-      padding: 20px 30px;
+
+      padding: 20px 40px;
       div {
+        img {
+          width: 50px;
+          height: 50px;
+        }
+
         ul {
           @include flexBox(space-between);
           gap: 30px;
+        }
+
+        &.media-icons {
+          ul {
+            gap: 20px;
+          }
         }
       }
     }
