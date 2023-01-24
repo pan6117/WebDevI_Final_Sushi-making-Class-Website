@@ -145,6 +145,7 @@
         h2 {
           grid-column-start: 2;
           grid-column-end: 4;
+          padding-top: 100px;
         }
 
         img {
@@ -291,4 +292,15 @@
       }
     }
   }
+}
+
+// TABLET VIEW*****
+@media (max-width: 1150px) {
+  @import "./Screens/tablet";
+}
+
+//
+// DESKTOP VIEW*****
+@media (max-width: 480px) {
+  @import "./Screens/smartphone";
 }

@@ -145,6 +145,7 @@ body {
 * body aside.about-block h2 {
   grid-column-start: 2;
   grid-column-end: 4;
+  padding-top: 100px;
 }
 * body aside.about-block img {
   width: 35vw;
@@ -274,4 +275,23 @@ body {
 }
 * body footer div.media-icons ul {
   gap: 20px;
+}
+
+@media (max-width: 1150px) {
+  * body aside.why-block {
+    padding: 30px;
+  }
+  * body aside.why-block div img {
+    width: 17vw;
+    height: 18vh;
+  }
+  * body aside.why-block div p {
+    padding: 10px;
+  }
+  * body aside.about-block {
+    padding: 30px;
+  }
+  * body aside.about-block p {
+    padding: 0px;
+  }
 }/*# sourceMappingURL=style.css.map */
