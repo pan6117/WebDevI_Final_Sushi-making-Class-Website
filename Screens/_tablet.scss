@@ -1,0 +1,27 @@
+* {
+  body {
+    aside {
+      &.why-block {
+        padding: 30px;
+
+        div {
+          img {
+            @include widthAndHeight(17vw, 18vh);
+          }
+
+          p {
+            padding: 10px;
+          }
+        }
+      }
+
+      &.about-block {
+        padding: 30px;
+
+        p {
+          padding: 0px;
+        }
+      }
+    }
+  }
+}
