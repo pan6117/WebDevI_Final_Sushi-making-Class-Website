@@ -10,7 +10,7 @@
 
   body {
     @include gridContainer(100vw, 10vh repeat(4, 95vh) 80vh 12vh);
-    font-family: Hakubo;
+    font-family: $font;
     border: 10px solid #ffc629;
 
     ul {

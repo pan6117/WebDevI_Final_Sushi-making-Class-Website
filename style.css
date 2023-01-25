@@ -1,5 +1,5 @@
 body {
-  font-family: "Ubuntu", "Sofia Sans", sans-serif;
+  font-family: "Hakubo", "Ubuntu", "Sofia Sans", sans-serif;
 }
 
 * {
@@ -14,7 +14,7 @@ body {
   grid-template-rows: 10vh repeat(4, 95vh) 80vh 12vh;
   justify-content: center;
   align-items: center;
-  font-family: Hakubo;
+  font-family: "Hakubo", "Ubuntu", "Sofia Sans", sans-serif;
   border: 10px solid #ffc629;
 }
 * body ul {
