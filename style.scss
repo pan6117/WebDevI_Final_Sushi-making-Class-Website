@@ -273,6 +273,7 @@
       @include flexBox(space-between);
 
       padding: 20px 40px;
+
       div {
         img {
           width: 50px;
@@ -299,8 +300,7 @@
   @import "./Screens/tablet";
 }
 
-//
-// DESKTOP VIEW*****
-@media (max-width: 480px) {
-  @import "./Screens/smartphone";
+// PHONE VIEW*****
+@media (max-width: 767px) {
+  @import "./Screens/phones";
 }

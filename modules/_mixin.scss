@@ -35,7 +35,18 @@
   text-shadow: $black 1px 0 0, $black 0 1px 0, $black -1px 0 0, $black 0 -1px 0;
 }
 
-// @mixin flexContainer($flexDirection : row ) {
-//     display: flex;
-//     flex-direction: $flexDirection;
-// }
+@mixin flexContainer($flexDirection: row) {
+  display: flex;
+  flex-direction: $flexDirection;
+}
+
+@mixin gridContainer2(
+  $gridTemplateColumn: 100%,
+  $justifyContent: center,
+  $alignItems: center
+) {
+  display: grid;
+  grid-template-columns: $gridTemplateColumn;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
