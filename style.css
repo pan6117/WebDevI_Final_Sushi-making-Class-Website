@@ -11,7 +11,7 @@ body {
 * body {
   display: grid;
   grid-template-columns: 100vw;
-  grid-template-rows: 10vh repeat(4, 95vh) 80vh 12vh;
+  grid-template-rows: 10vh repeat(4, 100vh) 80vh 12vh;
   justify-content: center;
   align-items: center;
   font-family: "Hakubo", "Ubuntu", "Sofia Sans", sans-serif;
