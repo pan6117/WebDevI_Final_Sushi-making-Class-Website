@@ -9,12 +9,17 @@
             @include widthAndHeight(17vw, 18vh);
           }
 
-          h4 {
-          }
-
           p {
             padding: 10px;
           }
+        }
+      }
+
+      &.about-block {
+        padding: 30px;
+
+        p {
+          padding: 0px;
         }
       }
     }

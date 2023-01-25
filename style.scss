@@ -1,7 +1,7 @@
 @import "./modules/mixin";
 @import "./modules/variable";
 @import "./modules/typography";
-// @import "modules/typography";
+
 * {
   margin: 0;
   padding: 0;
@@ -145,6 +145,7 @@
         h2 {
           grid-column-start: 2;
           grid-column-end: 4;
+          padding-top: 100px;
         }
 
         img {
@@ -270,6 +271,7 @@
 
     footer {
       @include flexBox(space-between);
+
       padding: 20px 40px;
 
       div {
@@ -293,10 +295,12 @@
   }
 }
 
-@media screen and (max-width: 480px) {
-  @import "Screens/phones";
+// TABLET VIEW*****
+@media (max-width: 1150px) {
+  @import "./Screens/tablet";
 }
 
+// PHONE VIEW*****
 @media (max-width: 767px) {
-  @import "Screens/phones";
+  @import "./Screens/phones";
 }
