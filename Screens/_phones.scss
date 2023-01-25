@@ -1,0 +1,61 @@
+//body{
+//@include gridContainer(50% flex-start flex-start);
+
+//}
+
+header {
+  nav {
+    ul {
+      @include flexBox;
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+      list-style-type: none;
+    }
+  }
+}
+
+body {
+  main {
+    @include gridContainer(80px 30px, 100px 300px 200px, center, center);
+    @include widthAndHeight(100%, 100%);
+
+    h1 {
+      font-size: 4rem;
+    }
+
+    button.booking-button {
+      border-radius: 20px;
+      padding: 20px;
+    }
+  }
+
+  aside.why-block {
+    @include gridContainer2(100%, flex-start, center);
+    @include flexContainer(column);
+    //@include gridContainer(100%, flex-start, flex-start);
+    //@include widthAndHeight(100%, 100%);
+  }
+
+  aside.about-block {
+    //@include gridContainer( 80px 30px , 100px 300px 200px, center, center );
+    h2 {
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+
+    p {
+      font-size: 20px;
+      grid-column-start: 3;
+      //grid-column-end: 5;
+      grid-row-start: 2;
+      grid-row-end: 4;
+      padding: 0px 0px 0px 50px;
+    }
+
+    img {
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+  }
+}
