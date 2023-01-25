@@ -1,61 +1,164 @@
-//body{
-//@include gridContainer(50% flex-start flex-start);
+* {
+  body {
+    @include gridContainer(100vw, 10vh 100vh 200vh 130vh 130vh 100vh 20vh);
 
-//}
+    header {
+      nav {
+        ul {
+          @include flexBox;
+          flex-direction: column;
+          gap: 10px;
+          text-align: center;
+          list-style-type: none;
+        }
+      }
+    }
 
-header {
-  nav {
-    ul {
-      @include flexBox;
-      flex-direction: column;
-      gap: 10px;
-      text-align: center;
-      list-style-type: none;
+    main {
+      @include gridContainer(80px 30px, 100px 300px 200px, center, center);
+      @include widthAndHeight(100%, 100%);
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      p.second-title {
+        font-size: 3rem;
+      }
+
+      p.main-content {
+        padding: 0px 20px 10px 0px;
+      }
+
+      button.booking-button {
+        border-radius: 20px;
+        padding: 20px;
+      }
+    }
+
+    aside {
+      &.why-block {
+        @include gridContainer2(100%, flex-start, center);
+        @include flexContainer(column);
+
+        div {
+          padding: 20px 10px;
+        }
+      }
+
+      &.about-block {
+        @include gridContainer(1fr, repeat(4, 1fr));
+        gap: 0px;
+        justify-items: center;
+
+        h2 {
+          grid-column-start: 1;
+          grid-column-end: 4;
+          padding: 0px;
+        }
+
+        img {
+          grid-column-start: 1;
+          grid-column-end: 4;
+          grid-row-start: 2;
+          grid-row-end: 3;
+          width: 80vw;
+        }
+
+        p {
+          font-size: 20px;
+          grid-column-start: 1;
+          grid-row-start: 3;
+          grid-row-end: 5;
+          padding: 0px 15px;
+        }
+      }
+
+      &.group-block {
+        @include gridContainer(1fr, repeat(4, 1fr));
+        padding: 30px;
+        gap: 0px;
+        justify-items: center;
+
+        h2 {
+          grid-column-start: 1;
+          grid-column-end: 4;
+          padding: 0px;
+        }
+
+        p {
+          font-size: 20px;
+          grid-column-start: 1;
+          grid-row-start: 3;
+          grid-row-end: 5;
+          padding: 0px 15px;
+        }
+
+        img {
+          grid-column-start: 3;
+          grid-column-end: -3;
+          grid-row-start: 3;
+          grid-row-end: 5;
+          height: 300px;
+        }
+      }
+
+      &.crew-block {
+        @include gridContainer(1fr, 1fr 2fr);
+        padding: 0px;
+        gap: 0px;
+        padding-bottom: 10px;
+
+        div {
+          padding: 0px;
+
+          img {
+            width: 25vw;
+            border-radius: 50%;
+          }
+
+          &.pan {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+          }
+
+          &.taty {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 5;
+          }
+        }
+      }
     }
   }
-}
 
-body {
-  main {
-    @include gridContainer(80px 30px, 100px 300px 200px, center, center);
-    @include widthAndHeight(100%, 100%);
+  footer {
+    padding: 10px 15px;
 
-    h1 {
-      font-size: 4rem;
-    }
+    div {
+      &.footer-center {
+        ul {
+          @include flexBox;
+          flex-direction: column;
+          gap: 10px;
+          text-align: center;
+          list-style-type: none;
+        }
+      }
 
-    button.booking-button {
-      border-radius: 20px;
-      padding: 20px;
-    }
-  }
-
-  aside.why-block {
-    @include gridContainer2(100%, flex-start, center);
-    @include flexContainer(column);
-    //@include gridContainer(100%, flex-start, flex-start);
-    //@include widthAndHeight(100%, 100%);
-  }
-
-  aside.about-block {
-    //@include gridContainer( 80px 30px , 100px 300px 200px, center, center );
-    h2 {
-      grid-column-start: 1;
-      grid-column-end: 2;
-    }
-
-    p {
-      font-size: 20px;
-      grid-column-start: 3;
-      //grid-column-end: 5;
-      grid-row-start: 2;
-      grid-row-end: 4;
-      padding: 0px 0px 0px 50px;
-    }
-
-    img {
-      grid-row-start: 2;
-      grid-row-end: 3;
+      &.media-icons {
+        ul {
+          @include gridContainer(
+            repeat(2, 1fr),
+            repeat(2, 1fr),
+            center,
+            center
+          );
+        }
+      }
     }
   }
 }
